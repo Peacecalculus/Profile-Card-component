@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROFILE CARD COMPONENT/PAGE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="hng.css">
+</head>
+<body>
+
+<div class="profile-card" data-testid="test-profile-card">
+    <header class="profile-header">
+        <nav data-testid="test-user-nav-section">
+            <span><i class="fa-solid fa-clock"></i></span>
+            <time id="current-time-display" data-testid="test-user-time" datetime=""></time>
+        </nav>
+        <figure data-testid="test-user-avatar">
+            <img src="images/My PICS.jpg" alt="A photo of Ezekiel Emem Peace"/>
+        </figure>
+        <div class="profile-info" data-testid="profile-info">
+            <h2 data-testid="test-user-name">Ezekiel Emem Peace</h2>
+            <p>Frontend Developer</p>
+        </div>
+    </header>
+
+    <main class="card-content">
+        <section id="about" class="card-section active" data-testid="test-user-bio-section">
+            <h2>ABOUT</h2>
+            <p data-testid="test-user-bio">A passionate frontend developer creating beautiful and functional web experiences. I specialize in building responsive, user-friendly interfaces with a strong foundation in HTML, CSS, and JavaScript.</p>
+            <ul class="social-links" data-testid="test-user-social-links">
+                <li data-testid="test-user-social-twitter"><a href="https://x.com/EzekielPeace8" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                <li data-testid="test-user-social-linkedim"><a href="https://www.linkedin.com/in/ezekielemempeace/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li data-testid="test-user-social-github"><a href="https://github.com/Peacecalculus" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                <li data-testid="test-user-social-email"><a href="mailto:peaceezekiel24@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+            </ul>
+        </section>
+
+        <section data-testid="test-user-hobbies-dislike" id="hobbies" class="card-section">
+            <h2>HOBBIES & DISLIKES</h2> 
+            <div class="card-timeline">
+                <div class="timeline-item" data-year="2024">
+                    <div class="timeline-title">Math Tutoring & Mentorship</div>
+                    <div class="timeline-desc">Mentoring students in Mathematics and introductory tech concepts.</div>
+                </div>
+                <div class="timeline-item" data-year="2023">
+                    <div class="timeline-title">Digital Art & Design</div>
+                    <div class="timeline-desc">Designing visual assets and logos with Pixellab and Canva.</div>
+                </div>
+                <div class="timeline-item" data-year="2022">
+                    <div class="timeline-title">Vanilla JS Problem Solving</div>
+                    <div class="timeline-desc">Engaging in coding challenges to strengthen core JavaScript skills.</div>
+                </div>
+                <div class="timeline-item timeline-dislikes" data-year="2024">
+                    <div class="timeline-title">Dislikes</div>
+                    <ul class="dislikes-list">
+                        <li>Over-complicating projects with unnecessary framework dependencies.</li>
+                        <li>Excessive abstraction that obscures core logic.</li>
+                        <li>Lack of clear documentation.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="contact" class="card-section" data-testid="test-user-contact-section">
+            <h2>CONTACT</h2>
+            <div class="contact-wrapper">
+                <div class="contact-item" data-testid="test-user-address">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>No. 30, Bishop Oluwole St, Lagos, Nigeria</span>
+                </div>
+                <div class="contact-item" data-testid="test-user-phone">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>(+234) 701 234 5678</span>
+                </div>
+                <div class="contact-item" data-testid="test-user-contact-email">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>peaceezekiel24@gmail.com</span>
+                </div>
+            </div>
+            <button class="contact-me" data-testid="test-user-contact-me">WORK TOGETHER</button>
+        </section>
+    </main>
+
+    <footer class="card-footer">
+    <nav class="card-buttons" data-testid="card-buttons">
+        <a href="#about" data-section="about" class="tab-button active">ABOUT</a>
+        <a href="#hobbies" data-section="hobbies" class="tab-button">HOBBIES</a>
+        <a href="#contact" data-section="contact" class="tab-button">CONTACT</a>
+    </nav>
+</footer>
+</div>
+
+<script src="hng.js"></script>
+</body>
+</html>
