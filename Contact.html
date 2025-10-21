@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="hng.css">
+</head>
+<body>
+    <div class="profile-card contact-page">
+        <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Profile</a>
+        
+        <main class="card-content">
+            <header class="page-header">
+                <h2>Contact Me</h2>
+                <p>Get in touch! Fill out the form below.</p>
+            </header>
+            
+            <div id="success-message" data-testid="test-contact-success">
+                Message sent! I'll get back to you soon.
+            </div>
+
+            <form id="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" data-testid="test-contact-name" aria-describedby="error-name" required>
+                    <div class="error-message" id="error-name" data-testid="test-contact-error-name"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" data-testid="test-contact-email" aria-describedby="error-email" required>
+                    <div class="error-message" id="error-email" data-testid="test-contact-error-email"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" data-testid="test-contact-subject" aria-describedby="error-subject" required>
+                    <div class="error-message" id="error-subject" data-testid="test-contact-error-subject"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" data-testid="test-contact-message" aria-describedby="error-message" required></textarea>
+                    <div class="error-message" id="error-message" data-testid="test-contact-error-message"></div>
+                </div>
+                
+                <button type="submit" class="contact-me" data-testid="test-contact-submit">Send Message</button>
+            </form>
+        </main>
+
+    <footer class="card-footer">
+        <nav class="card-buttons" data-testid="card-buttons">
+            <a href="index.html" class="tab-button">PROFILE</a>
+            <a href="about.html" class="tab-button">ABOUT ME</a>
+            <a href="contact.html" class="tab-button active">CONTACT</a>
+        </nav>
+</footer>
+    </div>
+    <script src="hng.js"></script>
+</body>
+</html>

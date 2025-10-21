@@ -18,31 +18,14 @@ body {
     padding: 20px;
 }
 
-/* --- NEW: Header Clock Styles --- */
-.header-clock {
-    position: absolute;
-    top: 15px;
-    left: 20px;
-    background-color: rgba(0, 0, 0, 0.2);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.header-clock i {
-    font-size: 1rem;
-}
 /* --- Main Card Container --- */
 .profile-card {
     max-width: 380px;
     width: 100%;
     border-radius: 20px;
+    background: linear-gradient(135deg, #4facfe 0%, #a385ff 40%, #ffffff 70%);
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1); 
-    background: linear-gradient(135deg, #4facfe 50%, #ffffff 100%, #4facfe 50%);
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     overflow: hidden; /* Crucial for rounded corners */
@@ -50,6 +33,8 @@ body {
 
 /* --- 1. Profile Header --- */
 .profile-header {
+    /* Gradient from your screenshot */
+    
     color: #222;
     padding: 70px 20px 20px;
     text-align: center;
@@ -80,6 +65,25 @@ body {
     letter-spacing: 1px;
 }
 
+/* --- Header Clock Styles --- */
+.header-clock {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "DM Sans", sans-serif;
+}
+.header-clock i {
+    font-size: 0.9rem;
+}
+
 /* --- 2. Card Content Area --- */
 .card-content {
     padding: 30px;
@@ -93,15 +97,15 @@ body {
 }
 
 .card-section h2 {
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 600;
     text-transform: uppercase;
-    color: #222;
+    color: #a0a0a0;
     margin-bottom: 20px;
     letter-spacing: 1px;
 }
 
-/* About Section */
+/* About Section (index.html) */
 #about p {
     line-height: 1.7;
     color: #666;
@@ -114,7 +118,7 @@ body {
     margin-top: 20px;
 }
 .social-links a {
-    color: #5e5959;
+    color: #d1d1d1;
     font-size: 1.5rem;
     transition: color 0.3s;
 }
@@ -122,7 +126,7 @@ body {
     color: #4facfe;
 }
 
-/* Hobbies Section */
+/* Hobbies Section (index.html) */
 .card-timeline {
     position: relative;
     padding-left: 30px;
@@ -151,7 +155,8 @@ body {
     left: -85px;
     top: 3px;
     font-size: 0.8rem;
-    color: #222;
+    color: #aaa;
+    width: 40px;
     text-align: right;
 }
 .timeline-title {
@@ -165,62 +170,19 @@ body {
     line-height: 1.5;
 }
 
-/* Styling for Dislikes list within the timeline */
+/* Dislikes List */
 .dislikes-list {
-    list-style: none; /* Use bullet points */
-    padding-left: 20px; /* Indent the list */
-    margin-top: 5px; /* Space above the list */
+    list-style: disc; 
+    padding-left: 20px; 
+    margin-top: 5px; 
     font-size: 0.95rem;
     color: #777;
     line-height: 1.5;
 }
-
 .timeline-dislikes .timeline-title {
-    color: #553d3b; /* Make dislikes title stand out, e.g., red */
+    color: #e74c3c; 
 }
 
-/* Contact Section */
-.contact-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 1.5em;
-    margin-bottom: 1em;
-}
-.contact-item {
-    display: flex;
-    align-items: space-between;
-    gap: 20px;
-    color: #605f5f;
-    font-size: 1rem;
-}
-.contact-item li {
-
-    display: flex;
-    align-items: center;
-    gap: 50px;
-}
-
-.contact-item i {
-    text-align: center;
-}
-.contact-me {
-    background: linear-gradient(to right, #4facfe, #00f2fe);
-    color: white;
-    border: none;
-    padding: 1em 5em;
-    margin-top: 20px;
-    margin-left: 0.8em;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-.contact-me:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-}
 
 /* --- 3. Footer Navigation --- */
 .card-footer {
@@ -253,4 +215,139 @@ body {
     width: 100%;
     height: 3px;
     background-color: #4facfe;
+}
+
+
+/* --- 4. New Page Styles (contact.html & about.html) --- */
+.back-link {
+    display: inline-block;
+    color: #555;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 20px 30px 0;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+.back-link:hover {
+    color: #4facfe;
+}
+.back-link i {
+    margin-right: 8px;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 20px;
+}
+.page-header h2 {
+    font-size: 1.8rem;
+    color: #333;
+}
+.page-header p {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* --- About Me Page --- */
+.about-section {
+    margin-bottom: 30px;
+}
+.about-section h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 10px;
+}
+.about-section h3 i {
+    margin-right: 10px;
+    color: #4facfe;
+    width: 20px;
+}
+.about-section p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.7;
+    padding-left: 30px;
+}
+
+
+/* --- Contact Page Form --- */
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 8px;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: "Jost", sans-serif;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #4facfe;
+    box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.2);
+}
+
+/* --- Validation Styles --- */
+.error-message {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-top: 5px;
+    display: none; /* Hidden by default */
+}
+.form-group input.invalid,
+.form-group textarea.invalid {
+    border-color: #e74c3c;
+}
+.form-group .error-message.show {
+    display: block; /* Shown by JavaScript */
+}
+
+#success-message {
+    display: none; /* Hidden by default */
+    padding: 20px;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.contact-me {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: white;
+    border: none;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 100%;
+}
+.contact-me:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
